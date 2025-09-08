@@ -1,0 +1,7 @@
+.search-bar {
+  margin: 0 auto;
+  display: flex;
+  justify-self: center;
+  padding-top: 350px;
+  height: 25px;
+}

@@ -1,0 +1,13 @@
+.app {
+  background-image: url(../../assets/hikersbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 900px;
+  position: relative;
+}
+
+.app__content {
+  max-width: 1360px;
+  margin: 0 auto;
+}

@@ -1,0 +1,51 @@
+.review__cntnr {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 18px;
+}
+
+.review-card {
+  width: 225px;
+  border: 1px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.review-card__text {
+  border-radius: 4px;
+  background-color: #fff;
+  margin: 0;
+}
+
+.review-card__image {
+  border-radius: 8px;
+  width: 100%;
+  height: 225px;
+}
+
+/* .review__likebtn {
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: none;
+  padding-top: 4px;
+  /* background-image: url("../../assets/likebtn.svg"); */
+
+/* .review-card__liked-icon { */
+/* background-color: #000; */
+/* padding-top: 4px; */
+/* width: fit-content; */
+/* height: 15px; */
+/* border: none; */
+/* background-image: url("../../assets/likedbtn.svg"); */
+
+.review-card__info-container {
+  display: flex;
+  /* flex-direction: row; */
+  position: absolute;
+  margin: 0;
+  padding: 2px 12px;
+  top: 15px;
+}
