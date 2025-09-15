@@ -1,0 +1,36 @@
+.main-page__section {
+  background-image: url(../../assets/hikersbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  height: 900px;
+  position: relative;
+}
+.main-page__section_about {
+  background-color: #2d6a4f;
+  margin: 0;
+  background-image: url(../../assets/abt-section6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.main-page__section_footer {
+  margin: 0;
+}
+
+@media screen and (max-width: 628px) {
+  .main-page__section {
+    padding: 0 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main-page__section {
+    padding: 0 30px;
+    height: 750px;
+  }
+
+  .main-page__section_about {
+    height: 700px;
+  }
+}

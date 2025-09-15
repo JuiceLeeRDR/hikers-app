@@ -1,0 +1,31 @@
+.socialfeed-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #8b5e3c;
+}
+
+.socialfeed__content {
+  max-width: 950px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.socialfeed-page__header {
+  margin-bottom: 20px;
+}
+
+.socialfeed-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

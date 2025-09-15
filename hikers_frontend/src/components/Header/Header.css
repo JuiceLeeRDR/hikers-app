@@ -1,5 +1,5 @@
 .header {
-  padding: 32px 20px 0;
+  /* padding: 32px 20px 0; */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -7,7 +7,7 @@
 
 .header__logo {
   width: 89px;
-  height: 40px;
+  height: 80px;
   margin: 0;
 }
 
@@ -15,6 +15,13 @@
   border-style: none;
   background-color: transparent;
   cursor: pointer;
+  align-self: center;
+}
+
+.header__btn__text {
+  margin: 0;
+  color: #006400;
+  font-size: 20px;
 }
 .header__login__btn {
   border-style: none;
@@ -25,4 +32,13 @@
   border-style: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+@media screen and (max-width: 628px) {
+  .header {
+    /* padding: 32px 20px 0; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
 }
