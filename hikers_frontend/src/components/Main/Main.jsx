@@ -10,6 +10,7 @@ function Main() {
     <main>
       <section className="main-page__section">
         <Searchbar />
+        <p className="main-page__reviews-text">Recent Reviews:</p>
         <ReviewCards />
       </section>
       <section className="main-page__section_about">
