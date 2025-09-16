@@ -1,8 +1,13 @@
 import "./Profile.css";
 import banner from "../../assets/abt-section2.jpg";
 import pfp from "../../assets/naruto.jpeg";
+import ImageCard from "../ImageCard/ImageCard";
 
-const Profile = ({ handleEditProfileBtnClick }) => {
+const Profile = ({
+  handleEditProfileBtnClick,
+  handleAddPostBtnClick,
+  handleAddReviewBtnClick,
+}) => {
   return (
     <div className="profile__page">
       <div className="profile">
@@ -19,7 +24,6 @@ const Profile = ({ handleEditProfileBtnClick }) => {
           </div>
           <h2 className="profile__username">RushDown Uzumaki</h2>
         </div>
-
         <div className="profile__info">
           <p className="profile__name">The Chosen One</p>
           <p className="profile__about">
@@ -32,10 +36,18 @@ const Profile = ({ handleEditProfileBtnClick }) => {
           >
             Edit profile
           </button>
-          <button className="profile__add-post__btn" type="button">
+          <button
+            className="profile__add-post__btn"
+            type="button"
+            onClick={handleAddPostBtnClick}
+          >
             Add a post
           </button>
-          <button className="profile__add-review__btn" type="button">
+          <button
+            className="profile__add-review__btn"
+            type="button"
+            onClick={handleAddReviewBtnClick}
+          >
             Add a review
           </button>
         </div>
@@ -56,6 +68,9 @@ const Profile = ({ handleEditProfileBtnClick }) => {
               <li>Zion Canyon - 5/5</li>
             </ul>
           </div>
+        </div>
+        <div className="profile__feed">
+          <ImageCard />
         </div>
       </div>
     </div>

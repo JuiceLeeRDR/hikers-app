@@ -9,9 +9,13 @@ import Profile from "../Profile/Profile";
 import EditProfileModal from "../EditProfileModal/EditProfileModal";
 import ReviewsPage from "../ReviewsPage/ReviewsPage";
 import SocialFeed from "../SocialFeed/SocialFeed";
+import AddPostModal from "../AddPostModal/AddPostModal";
+import ReviewsModal from "../ReviewsModal/ReviewsModal";
+import ImageCardModal from "../ImageCardModal/ImageCardModal";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
+  const [selectedCard, setSelectedCard] = useState(null);
   const [selectedReview, setSelectedReview] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [currentUser, setCurrentUser] = useState({ name: "", email: "" });
@@ -28,6 +32,10 @@ function App() {
     setActiveModal("delete");
   };
 
+  const handleCardClick = () => {
+    setSelectedCard(card);
+  };
+
   const handleRegisterBtnClick = () => {
     setActiveModal("register");
   };
@@ -38,6 +46,14 @@ function App() {
 
   const handleEditProfileBtnClick = () => {
     setActiveModal("edit-profile");
+  };
+
+  const handleAddPostBtnClick = () => {
+    setActiveModal("add-post");
+  };
+
+  const handleAddReviewBtnClick = () => {
+    setActiveModal("add-review");
   };
 
   const closeActiveModal = () => {
@@ -77,7 +93,11 @@ function App() {
           <Route
             path="/profile"
             element={
-              <Profile handleEditProfileBtnClick={handleEditProfileBtnClick} />
+              <Profile
+                handleEditProfileBtnClick={handleEditProfileBtnClick}
+                handleAddPostBtnClick={handleAddPostBtnClick}
+                handleAddReviewBtnClick={handleAddReviewBtnClick}
+              />
             }
           />
           <Route path="/reviews" element={<ReviewsPage />} />
@@ -93,6 +113,19 @@ function App() {
         />
         <RegisterModal
           isOpen={activeModal === "register"}
+          handleCloseClick={closeActiveModal}
+        />
+        <AddPostModal
+          isOpen={activeModal === "add-post"}
+          handleCloseClick={closeActiveModal}
+        />
+        <ReviewsModal
+          isOpen={activeModal === "add-review"}
+          handleCloseClick={closeActiveModal}
+        />
+        <ImageCardModal
+          card={selectedCard}
+          isOpen={activeModal === "preview"}
           handleCloseClick={closeActiveModal}
         />
       </div>

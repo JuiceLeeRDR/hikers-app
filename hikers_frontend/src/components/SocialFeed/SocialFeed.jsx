@@ -1,5 +1,5 @@
 import "./SocialFeed.css";
-import ReviewCard from "../ReviewCards/ReviewCards";
+import ImageCard from "../ImageCard/ImageCard";
 
 const SocialFeed = () => {
   return (
@@ -10,13 +10,7 @@ const SocialFeed = () => {
         </header>
 
         <section className="socialfeed-page__list">
-          <ReviewCard
-            trail="Appalachian Trail"
-            user="John Doe"
-            rating={5}
-            text="Amazing hike with great views!"
-            date="Sept 2025"
-          />
+          <ImageCard />
         </section>
       </div>
     </div>

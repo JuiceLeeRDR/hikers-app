@@ -1,8 +1,8 @@
-import "./ReviewsModal.css";
+import "./AddPostModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState, useEffect } from "react";
 
-const ReviewsModal = ({ isOpen, onAddItem, handleCloseClick }) => {
+const AddPostModal = ({ isOpen, onAddItem, handleCloseClick }) => {
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   //   const [weather, setWeather] = useState("");
@@ -30,49 +30,37 @@ const ReviewsModal = ({ isOpen, onAddItem, handleCloseClick }) => {
   return (
     <ModalWithForm
       // buttonText="Add garment"
-      title="New Trail Review"
+      title="New Post"
       isOpen={isOpen}
       handleCloseClick={handleCloseClick}
       //   onSubmit={handleSubmit}
     >
-      <label htmlFor="review-link-input" className="modal__label">
-        Trail Image link
+      <label htmlFor="image-link-input" className="modal__label">
+        Image link
         <input
           type="url"
-          id="review-link-input"
+          id="image-link-input"
           className="modal__input"
-          placeholder="Paste a link to a picture of your trail"
-        />
-        <span
-          className="modal__input-error"
-          id="review-link-input-error"
-        ></span>
-      </label>
-      <label htmlFor="review-rating-input" className="modal__label">
-        Rating
-        <input
-          type="number"
-          id="review-rating-input"
-          className="modal__input"
-          placeholder="Rate the trail out of 5"
+          placeholder="Paste a link to a picture"
           required
         />
+        <span className="modal__input-error" id="image-link-input-error"></span>
       </label>
 
-      <label htmlFor="review-input" className="modal__label">
-        Review
+      <label htmlFor="image-caption-input" className="modal__label">
+        Caption
         <input
           type="text"
-          id="review-input"
+          id="image-caption-input"
           className="modal__input"
-          placeholder="Type your review"
+          placeholder="Type your caption"
           required
           minLength="2"
-          maxLength="150"
+          maxLength="30"
         />
         <span
           className="modal__input-error"
-          id="review-caption-input-error"
+          id="image-caption-input-error"
         ></span>
       </label>
 
@@ -83,4 +71,4 @@ const ReviewsModal = ({ isOpen, onAddItem, handleCloseClick }) => {
   );
 };
 
-export default ReviewsModal;
+export default AddPostModal;
