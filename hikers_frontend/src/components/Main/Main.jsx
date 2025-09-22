@@ -5,11 +5,11 @@ import ReviewCards from "../ReviewCards/ReviewCards";
 import About from "../About/About";
 import Footer from "../Footer/Footer";
 
-function Main() {
+function Main({ onTrailSelect }) {
   return (
     <main>
       <section className="main-page__section">
-        <Searchbar />
+        <Searchbar onTrailSelect={onTrailSelect} />
         <p className="main-page__reviews-text">Recent Reviews:</p>
         <ReviewCards />
       </section>

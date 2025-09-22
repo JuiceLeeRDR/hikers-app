@@ -36,11 +36,11 @@ const LogInModal = ({
       //   onSubmit={handleSubmit}
       className="login-modal__container"
     >
-      {/* <img
+      <img
         src={modalbg}
         alt="background image for login modal"
         className="login__modal__bg"
-      /> */}
+      />
       <label htmlFor="user-email" className="modal__label">
         Email
         <input
@@ -69,13 +69,6 @@ const LogInModal = ({
       </label>
       <button type="submit" className="modal__save-button">
         Log In
-      </button>
-      <button
-        type="button"
-        className="modal__signup-btn"
-        // onClick={handleSignUpBtnClick}
-      >
-        or Sign Up
       </button>
     </ModalWithForm>
   );

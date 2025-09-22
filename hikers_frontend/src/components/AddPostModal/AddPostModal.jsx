@@ -2,21 +2,19 @@ import "./AddPostModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState, useEffect } from "react";
 
-const AddPostModal = ({ isOpen, onAddItem, handleCloseClick }) => {
+const AddPostModal = ({ isOpen, onAddImg, handleCloseClick }) => {
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  //   const [weather, setWeather] = useState("");
 
   useEffect(() => {
     if (isOpen) {
       setName("");
       setImageUrl("");
-      //   setWeather("");
     }
-  }, [isOpen]); // watch the opening state
+  }, [isOpen]);
 
   const handleSubmit = () => {
-    onAddItem({ name, imageUrl, weather });
+    onAddImg({ name, imageUrl });
   };
 
   const handleNameChange = (e) => {
@@ -33,7 +31,7 @@ const AddPostModal = ({ isOpen, onAddItem, handleCloseClick }) => {
       title="New Post"
       isOpen={isOpen}
       handleCloseClick={handleCloseClick}
-      //   onSubmit={handleSubmit}
+      onSubmit={handleSubmit}
     >
       <label htmlFor="image-link-input" className="modal__label">
         Image link
@@ -43,6 +41,8 @@ const AddPostModal = ({ isOpen, onAddItem, handleCloseClick }) => {
           className="modal__input"
           placeholder="Paste a link to a picture"
           required
+          value={imageUrl}
+          onChange={handleImageUrlChange}
         />
         <span className="modal__input-error" id="image-link-input-error"></span>
       </label>
@@ -57,6 +57,8 @@ const AddPostModal = ({ isOpen, onAddItem, handleCloseClick }) => {
           required
           minLength="2"
           maxLength="30"
+          value={name}
+          onChange={handleNameChange}
         />
         <span
           className="modal__input-error"

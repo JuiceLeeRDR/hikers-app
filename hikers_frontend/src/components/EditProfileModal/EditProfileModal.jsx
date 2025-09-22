@@ -50,6 +50,7 @@ const EditProfileModal = ({
       handleCloseClick={handleCloseClick}
       //   onSubmit={handleSubmit}
     >
+      <img src="" alt="" className="edit-profile__bg" />
       <label htmlFor="edit-name" className="modal__label">
         Name*
         <input

@@ -102,9 +102,6 @@ const RegisterModal = ({
       <button type="submit" className="modal__save-button">
         Sign Up
       </button>
-      <button type="button" className="modal__signup-btn" onClick={handleLogIn}>
-        or Log in
-      </button>
     </ModalWithForm>
   );
 };
