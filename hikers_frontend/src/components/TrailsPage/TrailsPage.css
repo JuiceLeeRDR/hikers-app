@@ -1,10 +1,10 @@
-.reviews-page {
+.trails-page {
   width: 100%;
   min-height: 100vh;
-  background-color: #4f6d7a;
+  background-color: #4b6f44;
 }
 
-.reviews__content {
+.trails-page__content {
   max-width: 950px;
   margin: auto;
   padding: 20px;
@@ -13,11 +13,11 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.reviews-page__header {
+.trails-page__header {
   margin-bottom: 20px;
 }
 
-.reviews-page__list {
+.trails-page__list {
   display: flex;
   flex-direction: column;
   gap: 15px;

@@ -83,6 +83,8 @@
   color: rgba(33, 33, 33, 0.7);
   display: block;
   margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
 }
 
 .modal__input:hover {
@@ -120,6 +122,8 @@
   line-height: 16px;
   gap: 8px;
   white-space: nowrap;
+  position: relative;
+  z-index: 2;
 }
 
 .modal__save-button_inactive {

@@ -14,3 +14,8 @@
   background-color: #ffd23f;
   border-color: #1b4332;
 }
+
+.search-btn {
+  margin-left: 10px;
+  border-radius: 10px;
+}

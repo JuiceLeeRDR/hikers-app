@@ -7,6 +7,8 @@ const Profile = ({
   handleEditProfileBtnClick,
   handleAddPostBtnClick,
   handleAddReviewBtnClick,
+  onImgClick,
+  feedImgs,
 }) => {
   return (
     <div className="profile__page">
@@ -70,7 +72,7 @@ const Profile = ({
           </div>
         </div>
         <div className="profile__feed">
-          <ImageCard />
+          <ImageCard onImgClick={onImgClick} feedImgs={feedImgs} />
         </div>
       </div>
     </div>

@@ -1,0 +1,42 @@
+export const reviews = [
+  {
+    _id: 101,
+    userId: 1,
+    trailId: 1,
+    rating: 5,
+    difficulty: "easy",
+    review: "Beautiful and family friendly.",
+  },
+  {
+    _id: 102,
+    userId: 1,
+    trailId: 2,
+    rating: 4,
+    difficulty: "moderate",
+    review: "Challenging but doable, very nice views!",
+  },
+  {
+    _id: 103,
+    userId: 1,
+    trailId: 3,
+    rating: 5,
+    difficulty: "hard",
+    review: "The sceneary is amazing!",
+  },
+  {
+    _id: 104,
+    userId: 1,
+    trailId: 4,
+    rating: 3,
+    difficulty: "easy",
+    review: "I loved this trial, the lake view is nice!",
+  },
+  {
+    _id: 105,
+    userId: 1,
+    trailId: 5,
+    rating: 4,
+    difficulty: "moderate",
+    review: "Was not as hard I anticipated.",
+  },
+];
