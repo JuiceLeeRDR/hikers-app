@@ -27,11 +27,9 @@ const AddPostModal = ({ isOpen, onAddImg, handleCloseClick }) => {
 
   return (
     <ModalWithForm
-      // buttonText="Add garment"
       title="New Post"
       isOpen={isOpen}
       handleCloseClick={handleCloseClick}
-      onSubmit={handleSubmit}
     >
       <label htmlFor="image-link-input" className="modal__label">
         Image link
