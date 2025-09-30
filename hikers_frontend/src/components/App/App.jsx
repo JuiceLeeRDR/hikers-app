@@ -12,7 +12,6 @@ import SocialFeed from "../SocialFeed/SocialFeed";
 import AddPostModal from "../AddPostModal/AddPostModal";
 import ReviewsModal from "../ReviewsModal/ReviewsModal";
 import ImageCardModal from "../ImageCardModal/ImageCardModal";
-import TrailsPage from "../TrailsPage/TrailsPage";
 import TrailsCardModal from "../TrailsCardModal/TrailsCardModal";
 import {
   deleteImgs,
