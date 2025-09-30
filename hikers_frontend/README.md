@@ -6,7 +6,7 @@ This is my first independent full-stack react project, Hikers. The premise of Hi
 
 ## Links
 
-"https://juiceleerdr.github.io/hikers-app"
+"https://juiceleerdr.github.io/hikers-app/"
 
 ## Pictures and Screenshots
 

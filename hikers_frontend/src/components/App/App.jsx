@@ -24,7 +24,7 @@ import { removeToken } from "../utils/auth";
 function App() {
   const [activeModal, setActiveModal] = useState("");
   const [selectedImg, setSelectedImg] = useState([]);
-  const [feedImgs, setFeedImgs] = [];
+  const [feedImgs, setFeedImgs] = useState([]);
   const [reviews, setReviews] = useState([]);
   const [selectedTrail, setSelectedTrail] = useState(null);
   const [selectedReview, setSelectedReview] = useState({});
