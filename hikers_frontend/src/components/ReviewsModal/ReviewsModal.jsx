@@ -2,7 +2,7 @@ import "./ReviewsModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState, useEffect } from "react";
 
-const ReviewsModal = ({ isOpen, onAddItem, handleCloseClick }) => {
+const ReviewsModal = ({ isOpen, handleCloseClick }) => {
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   //   const [weather, setWeather] = useState("");
@@ -15,17 +15,17 @@ const ReviewsModal = ({ isOpen, onAddItem, handleCloseClick }) => {
     }
   }, [isOpen]); // watch the opening state
 
-  const handleSubmit = () => {
-    onAddItem({ name, imageUrl, weather });
-  };
+  // const handleSubmit = () => {
+  //   onAddItem({ name, imageUrl });
+  // };
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
+  // const handleNameChange = (e) => {
+  //   setName(e.target.value);
+  // };
 
-  const handleImageUrlChange = (e) => {
-    setImageUrl(e.target.value);
-  };
+  // const handleImageUrlChange = (e) => {
+  //   setImageUrl(e.target.value);
+  // };
 
   return (
     <ModalWithForm

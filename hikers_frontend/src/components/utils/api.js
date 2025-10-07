@@ -1,4 +1,5 @@
 import { BASE_URL } from "./constants";
+import { getToken } from "./auth";
 
 function checkResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);

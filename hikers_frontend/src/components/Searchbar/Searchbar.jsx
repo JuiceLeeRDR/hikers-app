@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   getTrailsByCity,
   getTrailsByName,
   getTrailsByZip,
 } from "../utils/prescriptionTrailApi";
-import TrailsCardModal from "../TrailsCardModal/TrailsCardModal";
 import "./Searchbar.css";
 
 function Searchbar({ onTrailSelect }) {
@@ -23,21 +22,27 @@ function Searchbar({ onTrailSelect }) {
         onTrailSelect(trails.trails[0]);
         return;
       }
-    } catch {}
+    } catch (err) {
+      console.err;
+    }
     try {
       trails = await getTrailsByCity(query);
       if (trails && trails.length > 0) {
         onTrailSelect(trails[0]);
         return;
       }
-    } catch {}
+    } catch (err) {
+      console.err;
+    }
     try {
       trails = await getTrailsByName(query);
       if (trails && trails.length > 0) {
         onTrailSelect(trails[0]);
         return;
       }
-    } catch {}
+    } catch (err) {
+      console.err;
+    }
     setError("No trails found for your search.");
   };
 

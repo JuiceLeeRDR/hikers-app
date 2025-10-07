@@ -12,7 +12,11 @@ function ReviewCards() {
             Vietnam Veterans Park Trail Review
           </h2>
         </div>
-        <img className="review-card__image" src={trailreview1} alt="" />
+        <img
+          className="review-card__image"
+          src={trailreview1}
+          alt="Review Image"
+        />
         <p className="review-card__info">Rating: 5/5</p>
         <p className="review-card__info">Difficulty: easy</p>
         <p className="review-card__info">Great sceneray with a short walk</p>
@@ -21,7 +25,11 @@ function ReviewCards() {
         <div className="review-card__info-container">
           <h2 className="review-card__text">Crowders Mountain Review</h2>
         </div>
-        <img className="review-card__image" src={trailreview2} alt="" />
+        <img
+          className="review-card__image"
+          src={trailreview2}
+          alt="Review Image"
+        />
         <p className="review-card__info">Rating: 5/5</p>
         <p className="review-card__info">Difficulty: intermediate</p>
         <p className="review-card__info">
@@ -32,7 +40,11 @@ function ReviewCards() {
         <div className="review-card__info-container">
           <h2 className="review-card__text">Crowders Mountain Review</h2>
         </div>
-        <img className="review-card__image" src={trailreview3} alt="" />
+        <img
+          className="review-card__image"
+          src={trailreview3}
+          alt="Review Image"
+        />
         <p className="review-card__info">Rating: 5/5</p>
         <p className="review-card__info">Difficulty: intermediate</p>
         <p className="review-card__info">

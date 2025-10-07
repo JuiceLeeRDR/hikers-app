@@ -2,7 +2,7 @@ import "./AddPostModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState, useEffect } from "react";
 
-const AddPostModal = ({ isOpen, onAddImg, handleCloseClick }) => {
+const AddPostModal = ({ isOpen, handleCloseClick }) => {
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
@@ -13,9 +13,9 @@ const AddPostModal = ({ isOpen, onAddImg, handleCloseClick }) => {
     }
   }, [isOpen]);
 
-  const handleSubmit = () => {
-    onAddImg({ name, imageUrl });
-  };
+  // const handleSubmit = () => {
+  //   onAddImg({ name, imageUrl });
+  // };
 
   const handleNameChange = (e) => {
     setName(e.target.value);

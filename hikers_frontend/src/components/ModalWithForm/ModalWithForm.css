@@ -209,7 +209,7 @@
 
   .modal__close-button {
     top: 12px;
-    right: 12px;
+    right: 50px;
   }
 
   .modal__header {
@@ -228,11 +228,11 @@
     padding-left: 2px;
   }
 
-  .modal__close-button_type_preview {
+  /* .modal__close-button_type_preview {
     position: absolute;
     right: 5px;
     top: -50px;
-  }
+  } */
 
   .modal__save-button {
     width: 100%;

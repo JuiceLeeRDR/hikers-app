@@ -12,21 +12,33 @@ const About = () => {
             <div className="about-card__info-container">
               <h2 className="about-card__text">• Find Your Trail</h2>
 
-              <img className="about-card__image" src={trailimg} alt="" />
+              <img
+                className="about-card__image"
+                src={trailimg}
+                alt="Trail image"
+              />
             </div>
           </li>
           <li className="about-card about-card__review">
             <div className="about-card__info-container">
               <h2 className="about-card__text">• Leave A Review</h2>
 
-              <img className="about-card__image" src={reviewsimg} alt="" />
+              <img
+                className="about-card__image"
+                src={reviewsimg}
+                alt="Review image"
+              />
             </div>
           </li>
           <li className="about-card about-card__post">
             <div className="about-card__info-container">
               <h2 className="about-card__text">• Post Your Journey</h2>
 
-              <img className="about-card__image" src={selfieimg} alt="" />
+              <img
+                className="about-card__image"
+                src={selfieimg}
+                alt="Selfie Image"
+              />
             </div>
           </li>
         </div>

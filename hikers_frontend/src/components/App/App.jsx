@@ -1,5 +1,5 @@
-import { React, useEffect, useState } from "react";
-import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -14,12 +14,12 @@ import ReviewsModal from "../ReviewsModal/ReviewsModal";
 import ImageCardModal from "../ImageCardModal/ImageCardModal";
 import TrailsCardModal from "../TrailsCardModal/TrailsCardModal";
 import {
-  deleteImgs,
-  deleteReviews,
+  // deleteImgs,
+  // deleteReviews,
   postNewImg,
-  postNewReviews,
+  // postNewReviews,
 } from "../utils/api";
-import { removeToken } from "../utils/auth";
+// import { removeToken } from "../utils/auth";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -27,18 +27,18 @@ function App() {
   const [feedImgs, setFeedImgs] = useState([]);
   const [reviews, setReviews] = useState([]);
   const [selectedTrail, setSelectedTrail] = useState(null);
-  const [selectedReview, setSelectedReview] = useState({});
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [currentUser, setCurrentUser] = useState({ name: "", email: "" });
-  const [data, setData] = useState({
-    email: "",
-    password: "",
-  });
-  const [name, setName] = useState("");
-  const [avatar, setAvatar] = useState("");
-  const [banner, setBanner] = useState("");
+  // const [selectedReview, setSelectedReview] = useState({});
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [currentUser, setCurrentUser] = useState({ name: "", email: "" });
+  // const [data, setData] = useState({
+  //   email: "",
+  //   password: "",
+  // });
+  // const [name, setName] = useState("");
+  // const [avatar, setAvatar] = useState("");
+  // const [banner, setBanner] = useState("");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleDeleteBtnClick = () => {
     setActiveModal("delete");
@@ -73,10 +73,10 @@ function App() {
     setActiveModal("");
   };
 
-  const handleLogOutBtnClick = () => {
-    setIsLoggedIn(false);
-    removeToken();
-  };
+  // const handleLogOutBtnClick = () => {
+  //   setIsLoggedIn(false);
+  //   removeToken();
+  // };
 
   const onAddImg = ({ name, imageUrl }) => {
     console.log("Data being sent:", { name, imageUrl });
@@ -88,37 +88,37 @@ function App() {
       .catch(console.error);
   };
 
-  const onDeleteImg = (card) => {
-    deleteImgs(card._id)
-      .then(() => {
-        setImgs((prevImgs) => prevImgs.filter((img) => img._id !== card._id));
-        setSelectedImg({});
-        closeActiveModal();
-      })
-      .catch(console.error);
-  };
+  // const onDeleteImg = (card) => {
+  //   deleteImgs(card._id)
+  //     .then(() => {
+  //       setImgs((prevImgs) => prevImgs.filter((img) => img._id !== card._id));
+  //       setSelectedImg({});
+  //       closeActiveModal();
+  //     })
+  //     .catch(console.error);
+  // };
 
-  const onAddReview = ({ imageUrl, rating, difficulty, review }) => {
-    console.log("Data being sent:", { imageUrl, rating, difficulty, review });
-    postNewReviews({ imageUrl, rating, difficulty, review })
-      .then((newReview) => {
-        setSelectedReview([newReview, ...selectedReview]);
-        closeActiveModal();
-      })
-      .catch(console.error);
-  };
+  // const onAddReview = ({ imageUrl, rating, difficulty, review }) => {
+  //   console.log("Data being sent:", { imageUrl, rating, difficulty, review });
+  //   postNewReviews({ imageUrl, rating, difficulty, review })
+  //     .then((newReview) => {
+  //       setSelectedReview([newReview, ...selectedReview]);
+  //       closeActiveModal();
+  //     })
+  //     .catch(console.error);
+  // };
 
-  const onDeleteReview = (review) => {
-    deleteReviews(review._id)
-      .then(() => {
-        setSelectedReview((prevItems) =>
-          prevItems.filter((item) => item._id !== review._id)
-        );
-        setSelectedImg({});
-        closeActiveModal();
-      })
-      .catch(console.error);
-  };
+  // const onDeleteReview = (review) => {
+  //   deleteReviews(review._id)
+  //     .then(() => {
+  //       setSelectedReview((prevItems) =>
+  //         prevItems.filter((item) => item._id !== review._id)
+  //       );
+  //       setSelectedImg({});
+  //       closeActiveModal();
+  //     })
+  //     .catch(console.error);
+  // };
 
   useEffect(() => {
     if (!activeModal) return;
@@ -157,7 +157,7 @@ function App() {
           />
 
           <Route
-            path="/profile"
+            path="hikers-app/profile"
             element={
               <Profile
                 handleEditProfileBtnClick={handleEditProfileBtnClick}

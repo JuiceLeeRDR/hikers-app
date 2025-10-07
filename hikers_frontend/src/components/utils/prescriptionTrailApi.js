@@ -2,6 +2,11 @@ import { checkResponse } from "./api";
 
 export const API_BASEurl = "https://prescriptiontrails.org/api";
 
+const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+
+const targetUrl =
+  "https://prescriptiontrails.org/api/filter/?zip=87302&by=zip&offset=0&count=10&format=json";
+
 // Get single trail by ID
 export const getTrailById = (id) => {
   return fetch(`${API_BASEurl}/trail/${id}`).then(checkResponse);

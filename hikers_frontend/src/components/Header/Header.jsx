@@ -5,7 +5,7 @@ function Header({ onLogInClick, onRegisterClick }) {
   return (
     <div className="header">
       <img src={logo} alt="Hikers Logo" className="header__logo" />
-      <div className="header__btns">
+      <nav className="header__btns">
         <button
           onClick={onLogInClick}
           className="header__login__btn"
@@ -20,7 +20,7 @@ function Header({ onLogInClick, onRegisterClick }) {
         >
           <p className="header__btn__text">Register</p>
         </button>
-      </div>
+      </nav>
     </div>
   );
 }

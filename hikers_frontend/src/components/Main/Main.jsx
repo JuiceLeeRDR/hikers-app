@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./Main.css";
 import Searchbar from "../Searchbar/Searchbar";
 import ReviewCards from "../ReviewCards/ReviewCards";
@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 
 function Main({ onTrailSelect }) {
   return (
-    <main>
+    <main className="main-page">
       <section className="main-page__section">
         <Searchbar onTrailSelect={onTrailSelect} />
         <p className="main-page__reviews-text">Recent Reviews:</p>
