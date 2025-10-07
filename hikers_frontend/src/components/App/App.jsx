@@ -25,7 +25,7 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [selectedImg, setSelectedImg] = useState([]);
   const [feedImgs, setFeedImgs] = useState([]);
-  const [reviews, setReviews] = useState([]);
+  const [reviews] = useState([]);
   const [selectedTrail, setSelectedTrail] = useState(null);
   // const [selectedReview, setSelectedReview] = useState({});
   // const [isLoggedIn, setIsLoggedIn] = useState(false);

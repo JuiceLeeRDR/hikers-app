@@ -3,8 +3,8 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useState, useEffect } from "react";
 
 const ReviewsModal = ({ isOpen, handleCloseClick }) => {
-  const [name, setName] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
+  const [setName] = useState("");
+  const [setImageUrl] = useState("");
   //   const [weather, setWeather] = useState("");
 
   useEffect(() => {
