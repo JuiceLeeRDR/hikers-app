@@ -52,7 +52,7 @@ function Searchbar({ onTrailSelect }) {
         <input
           type="text"
           className="search-bar__text"
-          placeholder="Find your next trail"
+          placeholder="Search for a trail by city, zip, or trail name"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
