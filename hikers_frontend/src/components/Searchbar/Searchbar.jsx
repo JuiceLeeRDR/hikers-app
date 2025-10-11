@@ -48,7 +48,7 @@ function Searchbar({ onTrailSelect }) {
 
   return (
     <div className="search-bar">
-      <form onSubmit={handleSearch}>
+      <form onSubmit={handleSearch} className="search-bar__form">
         <input
           type="text"
           className="search-bar__text"

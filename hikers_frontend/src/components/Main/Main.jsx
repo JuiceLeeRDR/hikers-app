@@ -16,9 +16,9 @@ function Main({ onTrailSelect }) {
       <section className="main-page__section_about">
         <About />
       </section>
-      <section className="main-page__section_footer">
+      {/* <section className="main-page__section_footer">
         <Footer />
-      </section>
+      </section> */}
     </main>
   );
 }

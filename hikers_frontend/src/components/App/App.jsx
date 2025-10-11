@@ -13,6 +13,7 @@ import AddPostModal from "../AddPostModal/AddPostModal";
 import ReviewsModal from "../ReviewsModal/ReviewsModal";
 import ImageCardModal from "../ImageCardModal/ImageCardModal";
 import TrailsCardModal from "../TrailsCardModal/TrailsCardModal";
+import Footer from "../Footer/Footer";
 import {
   // deleteImgs,
   // deleteReviews,
@@ -157,7 +158,7 @@ function App() {
           />
 
           <Route
-            path="hikers-app/profile"
+            path="/profile"
             element={
               <Profile
                 handleEditProfileBtnClick={handleEditProfileBtnClick}
@@ -183,6 +184,7 @@ function App() {
           />
           {/* <Route path="/trails" element={<TrailsPage trails={trails} />} /> */}
         </Routes>{" "}
+        <Footer />
         <EditProfileModal
           isOpen={activeModal === "edit-profile"}
           handleCloseClick={closeActiveModal}

@@ -4,5 +4,6 @@
 
 .app__content {
   max-width: 1850px;
+  outline: 4px solid red !important;
   margin: 0 auto;
 }
