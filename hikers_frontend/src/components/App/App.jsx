@@ -130,10 +130,19 @@ function App() {
       }
     };
 
+    const handleOutsideClick = (e) => {
+      if (e.target.classList.contains("modal_opened")) {
+        closeActiveModal();
+      }
+    };
+
     document.addEventListener("keydown", handleEscClose);
+    document.addEventListener("mousedown", handleOutsideClick);
 
     return () => {
+      console.log("the outside has been clicked");
       document.removeEventListener("keydown", handleEscClose);
+      document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [activeModal]);
 
@@ -184,7 +193,6 @@ function App() {
           />
           {/* <Route path="/trails" element={<TrailsPage trails={trails} />} /> */}
         </Routes>{" "}
-        <Footer />
         <EditProfileModal
           isOpen={activeModal === "edit-profile"}
           handleCloseClick={closeActiveModal}
@@ -220,6 +228,7 @@ function App() {
           city={selectedTrail?.city}
           handleCloseClick={closeActiveModal}
         />
+        <Footer />
       </div>
     </div>
   );

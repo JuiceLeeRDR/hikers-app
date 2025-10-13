@@ -3,7 +3,6 @@ import "./Main.css";
 import Searchbar from "../Searchbar/Searchbar";
 import ReviewCards from "../ReviewCards/ReviewCards";
 import About from "../About/About";
-import Footer from "../Footer/Footer";
 
 function Main({ onTrailSelect }) {
   return (
@@ -16,9 +15,6 @@ function Main({ onTrailSelect }) {
       <section className="main-page__section_about">
         <About />
       </section>
-      {/* <section className="main-page__section_footer">
-        <Footer />
-      </section> */}
     </main>
   );
 }
