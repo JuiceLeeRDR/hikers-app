@@ -7,7 +7,7 @@ const RegisterModal = ({
   isOpen,
   handleCloseClick,
   handleRegistration,
-  handleLogIn,
+  // handleLogIn,
 }) => {
   const [data, setData] = useState({
     name: "",
@@ -24,7 +24,7 @@ const RegisterModal = ({
     }));
   };
   const handleSubmit = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     console.log("the register button is working");
     handleRegistration({
       name: data.name,
@@ -101,9 +101,6 @@ const RegisterModal = ({
       </label>
       <button type="submit" className="modal__save-button">
         Sign Up
-      </button>
-      <button type="button" className="modal__signup-btn" onClick={handleLogIn}>
-        or Log in
       </button>
     </ModalWithForm>
   );

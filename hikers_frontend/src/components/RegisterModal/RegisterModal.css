@@ -137,12 +137,12 @@
 }
 
 .register__modal__bg {
-  z-index: 0;
   position: absolute;
-  top: 88px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
   opacity: 25%;
-  overflow: hidden;
-  min-width: 496px;
-  width: 730px;
-  left: -96px;
+  top: 130px;
 }

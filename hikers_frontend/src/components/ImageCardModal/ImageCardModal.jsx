@@ -1,10 +1,10 @@
 import "./ImageCardModal.css";
 import mwfclosebtn from "../../assets/mwfclosebtn.svg";
 // import CurrentUserContext from "../../contexts/CurrentUserContext";
-import { useContext } from "react";
+// import { useContext } from "react";
 
 function ImageCardModal({
-  card,
+  // card,
   handleCloseClick,
   deleteClick,
   isOpen,
@@ -34,7 +34,7 @@ function ImageCardModal({
         </button>
         <img src="" alt="" className="item-modal__image" />
         <div className="item-modal__textbox">
-          <p className="item-modal__image-caption">""</p>
+          <p className="item-modal__image-caption">Test Image</p>
           <div className="delete-btn__cntnr">
             {/* {isOwn && isLoggedIn && ( */}
             <button className="item-card__delete-btn" onClick={deleteClick}>

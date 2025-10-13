@@ -1,8 +1,13 @@
-# React + Vite
+# Hikers - A Social App for Outdoor Lovers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This is my first independent full-stack react project, Hikers. The premise of Hikers is to retrieve data fromm the prescriptionTrails Api to let users find trails in the New Mexico area, by city name, zip code, specific trail name and by trail id. It also allows for users to add images to their profiles, that will also be placed on the social feed. As well as being able to leave reviews for the hikes they take.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Links
+
+"https://juiceleerdr.github.io/hikers-app/"
+
+## Pictures and Screenshots
+
+![Image of home page](</Users/raiquanharris/Documents/Screenshot 2025-09-27 at 8.12.38 PM.png>)

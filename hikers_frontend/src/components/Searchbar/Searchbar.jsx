@@ -1,13 +1,67 @@
+import { useState } from "react";
+import {
+  getTrailsByCity,
+  getTrailsByName,
+  getTrailsByZip,
+} from "../utils/prescriptionTrailApi";
 import "./Searchbar.css";
 
-function Searchbar() {
+function Searchbar({ onTrailSelect }) {
+  const [query, setQuery] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    let trails = [];
+
+    try {
+      trails = await getTrailsByZip(query);
+      console.log("Search query:", query);
+      console.log("API response:", trails);
+      if (trails && trails.trails && trails.trails.length > 0) {
+        onTrailSelect(trails.trails[0]);
+        return;
+      }
+    } catch (err) {
+      console.err;
+    }
+    try {
+      trails = await getTrailsByCity(query);
+      if (trails && trails.length > 0) {
+        onTrailSelect(trails[0]);
+        return;
+      }
+    } catch (err) {
+      console.err;
+    }
+    try {
+      trails = await getTrailsByName(query);
+      if (trails && trails.length > 0) {
+        onTrailSelect(trails[0]);
+        return;
+      }
+    } catch (err) {
+      console.err;
+    }
+    setError("No trails found for your search.");
+  };
+
   return (
     <div className="search-bar">
-      <input
-        type="text"
-        className="search-bar__text"
-        placeholder="Find your next trail"
-      />
+      <form onSubmit={handleSearch} className="search-bar__form">
+        <input
+          type="text"
+          className="search-bar__text"
+          placeholder="Search for a trail by city, zip, or trail name"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button className="search-btn" type="submit">
+          {" "}
+          Search{" "}
+        </button>
+      </form>
+      {error && <p className="search-error">{error}</p>}
     </div>
   );
 }

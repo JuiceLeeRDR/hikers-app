@@ -1,13 +1,13 @@
 import "./EditProfileModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import { useState, useEffect, useContext } from "react";
+// import { useState, useEffect, useContext } from "react";
 // import CurrentUserContext from "../../../contexts/CurrentUserContext";
 
 const EditProfileModal = ({
   isOpen,
   handleCloseClick,
   // currentUser,
-  handleProfileUpdate,
+  // handleProfileUpdate,
 }) => {
   //   const currentUser = useContext(CurrentUserContext);
 
@@ -50,6 +50,7 @@ const EditProfileModal = ({
       handleCloseClick={handleCloseClick}
       //   onSubmit={handleSubmit}
     >
+      <img src="" alt="" className="edit-profile__bg" />
       <label htmlFor="edit-name" className="modal__label">
         Name*
         <input

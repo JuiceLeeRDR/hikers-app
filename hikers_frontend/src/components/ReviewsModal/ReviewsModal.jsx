@@ -1,31 +1,31 @@
 import "./ReviewsModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-const ReviewsModal = ({ isOpen, onAddItem, handleCloseClick }) => {
-  const [name, setName] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-  //   const [weather, setWeather] = useState("");
+const ReviewsModal = ({ isOpen, handleCloseClick }) => {
+  // const [name, setName] = useState("");
+  // const [imageUrl, setImageUrl] = useState("");
+  // //   const [weather, setWeather] = useState("");
 
-  useEffect(() => {
-    if (isOpen) {
-      setName("");
-      setImageUrl("");
-      //   setWeather("");
-    }
-  }, [isOpen]); // watch the opening state
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     setName("");
+  //     setImageUrl("");
+  //     //   setWeather("");
+  //   }
+  // }, [isOpen]); // watch the opening state
 
-  const handleSubmit = () => {
-    onAddItem({ name, imageUrl, weather });
-  };
+  // const handleSubmit = () => {
+  //   onAddItem({ name, imageUrl });
+  // };
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
+  // const handleNameChange = (e) => {
+  //   setName(e.target.value);
+  // };
 
-  const handleImageUrlChange = (e) => {
-    setImageUrl(e.target.value);
-  };
+  // const handleImageUrlChange = (e) => {
+  //   setImageUrl(e.target.value);
+  // };
 
   return (
     <ModalWithForm
@@ -52,12 +52,50 @@ const ReviewsModal = ({ isOpen, onAddItem, handleCloseClick }) => {
         Rating
         <input
           type="number"
+          max="5"
+          min="1"
           id="review-rating-input"
           className="modal__input"
           placeholder="Rate the trail out of 5"
           required
         />
       </label>
+      <fieldset className="modal__btn-cntnr">
+        <legend className="modal__text">Select the difficulty:</legend>
+        <div className="modal__radio-input">
+          <input
+            type="radio"
+            id="easy"
+            name="weatherCondition"
+            value="easy"
+            // checked={weather === "easy"}
+            // onChange={handleSetWeather}
+          />
+          <label htmlFor="easy">Easy</label>
+        </div>{" "}
+        <div className="modal__radio-input">
+          <input
+            type="radio"
+            id="moderate"
+            name="weatherCondition"
+            value="moderate"
+            // checked={weather === "moderate"}
+            // onChange={handleSetWeather}
+          />
+          <label htmlFor="moderate">Moderate</label>
+        </div>{" "}
+        <div className="modal__radio-input">
+          <input
+            type="radio"
+            id="hard"
+            name="weatherCondition"
+            value="hard"
+            // checked={weather === "hard"}
+            // onChange={handleSetWeather}
+          />
+          <label htmlFor="hard">Hard</label>
+        </div>
+      </fieldset>
 
       <label htmlFor="review-input" className="modal__label">
         Review

@@ -1,18 +1,18 @@
 import "./ImageCard.css";
 import trailimgcard1 from "../../assets/trailreview1.jpg";
 import likebtn from "../../assets/likebtn.svg";
-import likedbtn from "../../assets/likedbtn.svg";
+// import likedbtn from "../../assets/likedbtn.svg";
 
-const ImageCard = () => {
+const ImageCard = ({ card, onImgClick }) => {
   const handleImgCardClick = () => {
-    onSelectCard(item);
+    onImgClick(card);
   };
   return (
     <li className="imgcard-card">
       <img
         className="imgcard-card__image"
         src={trailimgcard1}
-        alt=""
+        alt="Trail image"
         onClick={handleImgCardClick}
       />
       <div className="imgcard-card__info-container">

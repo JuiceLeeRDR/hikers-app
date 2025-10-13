@@ -5,6 +5,10 @@
   padding-top: 250px;
 }
 
+.search-bar__form {
+  margin: 0;
+}
+
 .search-bar__text {
   height: 25px;
   width: 400px;
@@ -13,4 +17,36 @@
   padding: 5px;
   background-color: #ffd23f;
   border-color: #1b4332;
+}
+
+.search-btn {
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 516px) {
+  .search-bar {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 200px;
+  }
+
+  .search-bar__text {
+    height: 25px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 0;
+    padding: 5px;
+    background-color: #ffd23f;
+    border-color: #1b4332;
+  }
+
+  .search-btn {
+    margin-left: 100px;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 5px;
+  }
 }

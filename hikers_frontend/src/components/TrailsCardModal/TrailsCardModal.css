@@ -1,0 +1,58 @@
+.trail-card__modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.trail-card__modal_opened {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.trail-card__content {
+  position: relative;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.trail-card__modal__close-button {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-style: none;
+  background-color: transparent;
+  top: 10px;
+  right: 10px;
+}
+
+.trail-card__modal__close-button:hover {
+  cursor: pointer;
+  opacity: 100%;
+}
+
+.trail-card__text {
+  padding: 4px 8px;
+  width: fit-content;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #000;
+  margin: 0;
+}

@@ -1,13 +1,20 @@
 import "./ReviewsPage.css";
 import ReviewCard from "../ReviewCards/ReviewCards";
 
-const ReviewsPage = () => {
+const ReviewsPage = (handleAddReviewBtnClick) => {
   return (
     <div className="reviews-page">
       <div className="reviews__content">
         <header className="reviews-page__header">
           <h1>Trail Reviews</h1>
           <input type="text" placeholder="Search reviews..." />
+          <button
+            className="reviews__add-review__btn"
+            type="button"
+            onClick={handleAddReviewBtnClick}
+          >
+            Add a review
+          </button>
           <div className="reviews__filter__checkboxes">
             <p className="review__filter__text">Highest Rated:</p>
             <button className="reviews__filter__checkbox" type="checkbox">
